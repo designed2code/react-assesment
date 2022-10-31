@@ -1,0 +1,12 @@
+.accordion-subHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.accordion-icons {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}

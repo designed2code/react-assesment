@@ -1,24 +1,20 @@
-import logo from './logo.svg';
 import './App.css';
+import AccordionComponent from './AccordionComponent';
+import SearchInputComponent from './SearchInputComponent';
+import { useState } from 'react';
 
 function App() {
+  const [searchText, setSearchText] = useState('');
+  const [searchResults, setSearchResults] = useState([]);
+  const handleSearchInputText = (e) => {
+    console.log('I am triggered from SearchCOmponent');
+    setSearchText(e.target.value);
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <SearchInputComponent handleSearchInputText={handleSearchInputText} />
+      <AccordionComponent />
+    </>
   );
 }
 
